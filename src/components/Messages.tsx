@@ -3,7 +3,7 @@ import { useChannels } from "../contexts/ChannelsContext";
 import { useUser } from '../contexts/UserContext';
 
 const Messages: React.FC  = () => {
-    const {user} = useUser()
+    const {authUser} = useUser()
     const { messages} = useChannels()
     return (
         <div>
@@ -12,8 +12,8 @@ const Messages: React.FC  = () => {
                 <div className="" key = {key}>
                     <p>---: {message.text}</p>
                     {/* <p>{message.uid}</p>
-                    <p>{message.userName}</p>
-                    <p>{message.userAvatar}</p> */}
+                    <p>{message.displayName}</p>
+                    <p>{message.photoURL}</p> */}
                 </div>
             ))
         }

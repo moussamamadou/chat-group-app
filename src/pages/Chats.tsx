@@ -8,21 +8,10 @@ import ChannelUsers from '../components/ChannelUsers'
 import User from '../components/User'
 import { ChannelsProvider } from '../contexts/ChannelsContext'
 import { useUser } from '../contexts/UserContext';
-import { useHistory } from "react-router-dom"
 
 const Chats:React.FC = () => {
 
-    const { user, logOut } = useUser()
-
-    const history = useHistory()
-
-    React.useEffect(() => {        
-      if (!user || user === null) {
-        history.push("/")
-        return
-      }
-    }, [user, history])
-
+    const { logOut } = useUser()
     return (
         <ChannelsProvider>
             <>

@@ -2,7 +2,7 @@ import React from 'react';
 import { useUser } from '../contexts/UserContext';
 
 const Login:React.FC = () => {
-    const { loginGoogle } = useUser()
+    const { loginGoogle, loginGithub } = useUser()
 
     return (
         <div>
@@ -11,6 +11,12 @@ const Login:React.FC = () => {
                 onClick={loginGoogle}
             >
                 Sign In with Google
+            </div>
+            <div
+                className=''
+                onClick={loginGithub}
+            >
+                Sign In with Github
             </div>
         </div>
     );

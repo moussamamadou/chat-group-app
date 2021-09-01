@@ -11,7 +11,7 @@ const ChannelUsers = () => {
             { 
                 activeChannel.users && activeChannel.users.map((user, key) => (   
                     <div className="" key = {key}>
-                        <p>- {user.userName}</p>
+                        <p>- {user.displayName}</p>
                     </div>
                 ))
             }

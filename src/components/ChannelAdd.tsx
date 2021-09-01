@@ -14,8 +14,8 @@ const ChannelAdd = () => {
             description: formDesc, 
             users:[{
                 uid:'',
-                userAvatar:'',
-                userName:''
+                photoURL:'',
+                displayName:''
             }]
         })
         setFormName('');
