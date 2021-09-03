@@ -5,16 +5,14 @@ import Login from './pages/Login'
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <UserProvider>
-          <Switch>
-            <Route path='/' component={Chats} exact />
-            <Route path='/login' component={Login} />
-          </Switch>
-        </UserProvider>
-      </Router>
-    </div>
+    <Router>
+      <UserProvider>
+        <Switch>
+          <Route path='/' component={Chats} exact />
+          <Route path='/login' component={Login} />
+        </Switch>
+      </UserProvider>
+    </Router>
   );
 }
 

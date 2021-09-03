@@ -17,7 +17,7 @@ export interface Channel {
 
 export interface Message {
     text:string
-    createAt:string
+    createAt:{nanoseconds:string, seconds:string}
     user:User
 }
 
